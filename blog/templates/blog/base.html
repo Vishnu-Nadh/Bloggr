@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% if title %}
+    <title>Blog - {{title}}</title>
+    {% else %}
+    <title>Blog</title>
+    {% endif %}
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__left">
+        <span class="nav__logo">
+          <a href="{% url 'blog-home' %}" class="nav__link">Bloggr</a>
+        </span>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="{% url 'blog-home' %}" class="nav__link"> Home </a>
+          </li>
+          <li class="nav__item">
+            <a href="{% url 'blog-about' %}" class="nav__link"> About </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav__right">
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Login </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Register </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="main__content">{% block content %} {% endblock %}</div>
+      <section class="sidebar">
+        <p class="sidebar__info">You can put any info here</p>
+        <ul class="sidebar__menu">
+          <li class="sidebar__menu__item">
+            <a href="#" class="sidebar__link"> Latest Posts </a>
+          </li>
+          <li class="sidebar__menu__item">
+            <a href="#" class="sidebar__link"> Announcements </a>
+          </li>
+          <li class="sidebar__menu__item">
+            <a href="#" class="sidebar__link"> Calenders </a>
+          </li>
+          <li class="sidebar__menu__item">
+            <a href="#" class="sidebar__link"> etc </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
