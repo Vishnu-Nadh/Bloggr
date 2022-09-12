@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %} {% load tailwind_filters %} {% block content %}
+<form action="#" method="post">
+  {% csrf_token %}
+  <fieldset class="form__group">
+    <legend class="form__title">Join Today</legend>
+    {{ form|crispy }}
+  </fieldset>
+  <div class="form__group">
+    <button type="submit" class="form__btn">Sign Up</button>
+  </div>
+  <div class="form_group">
+    <smalll class="form__query"
+      >Already have an account ?
+      <a href="{% url 'login' %}" class="form__link">Sign In</a>
+    </smalll>
+  </div>
+</form>
+{% endblock %}

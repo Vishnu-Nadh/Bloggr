@@ -10,6 +10,7 @@
     {% else %}
     <title>Blog</title>
     {% endif %}
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static 'blog/css/main.css' %}" />
   </head>
   <body>
@@ -29,17 +30,33 @@
       </div>
       <div class="nav__right">
         <ul class="nav__items">
+          {% if user.is_authenticated %}
           <li class="nav__item">
-            <a href="#" class="nav__link"> Login </a>
+            <a href="{% url 'post-create' %}" class="nav__link"> Add Post </a>
           </li>
           <li class="nav__item">
-            <a href="#" class="nav__link"> Register </a>
+            <a href="{% url 'profile' %}" class="nav__link"> Profile </a>
           </li>
+          <li class="nav__item">
+            <a href="{% url 'logout' %}" class="nav__link"> Logout </a>
+          </li>
+          {% else %}
+          <li class="nav__item">
+            <a href="{% url 'login' %}" class="nav__link"> Login </a>
+          </li>
+          <li class="nav__item">
+            <a href="{% url 'register' %}" class="nav__link"> Register </a>
+          </li>
+          {% endif %}
         </ul>
       </div>
     </nav>
     <main class="main">
-      <div class="main__content">{% block content %} {% endblock %}</div>
+      <div class="main__content">
+        {% if messages %} {% for message in messages %}
+        <div class="message-{{ message.tags }}">{{ message }}</div>
+        {% endfor %} {% endif %} {% block content %} {% endblock %}
+      </div>
       <section class="sidebar">
         <p class="sidebar__info">You can put any info here</p>
         <ul class="sidebar__menu">

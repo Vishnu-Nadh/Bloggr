@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %} {% load tailwind_filters %} {% block content %}
+<section>
+  <div>
+    <img src="{{ user.profile.image.url }}" alt="profile" />
+  </div>
+  <div>
+    <h3>{{ user.username }}</h3>
+    <h5>{{ user.email }}</h5>
+  </div>
+</section>
+<form action="#" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <fieldset class="form__group">
+    <legend class="form__title">Profile Info</legend>
+    {{ u_form|crispy }} {{ p_form|crispy }}
+  </fieldset>
+  <div class="form__group">
+    <button type="submit" class="form__btn">Update Info</button>
+  </div>
+</form>
+{% endblock %}
