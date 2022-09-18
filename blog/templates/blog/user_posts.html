@@ -1,4 +1,9 @@
-{% extends "blog/base.html" %} {% block content %} {% for post in posts %}
+{% extends "blog/base.html" %} 
+
+{% block content %} 
+<h1>Posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }}) </h1>
+
+{% for post in posts %}
 <div>
   <img
     style="width: 40px; width: 40px; border-radius: 50%"

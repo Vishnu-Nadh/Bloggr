@@ -9,7 +9,7 @@
 <h1>
   <a href="#"> {{ object.title }} </a>
 </h1>
-<p>{{ object.author }} on {{ object.date_posted|date:"F d, Y" }}</p>
+<p><a href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a> on {{ object.date_posted|date:"F d, Y" }}</p>
 <p>{{ object.content }}</p>
 {% if object.author == user %}
 <div>

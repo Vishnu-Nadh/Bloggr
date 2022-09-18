@@ -11,10 +11,12 @@ class Profile(models.Model):
     def __str__(self) -> str:
         return f"{self.user.username} Profile"
 
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
         img = Image.open(self.image.path)
+        
         if img.width > 300 or img.height > 300:
             reduced_size = (300, 300)
             img.thumbnail(reduced_size)
             img.save(self.image.path)
+            
