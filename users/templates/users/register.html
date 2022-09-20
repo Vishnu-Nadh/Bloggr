@@ -1,10 +1,11 @@
 {% extends 'blog/base.html' %}
+{% load tailwind_filters %}
 {% block content %}
 <form method="post">
   {% csrf_token %}
   <fieldset class="form__group">
     <legend class="form__title">Join Today</legend>
-    {{ form }}
+    {{ form|crispy }}
   </fieldset>
   <div class="form__group">
     <button type="submit" class="form__btn">Sign Up</button>

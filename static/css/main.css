@@ -164,6 +164,21 @@ nav i {
   box-shadow: var(--shadow-md);
 }
 
+.form__btn {
+  font-family: var(--font-family-heading);
+  font-size: 1.3rem;
+  border-radius: 0.8rem;
+  padding: 1rem 2rem;
+  color: var(--color-pink);
+  border: none;
+  font-weight: 600;
+  box-shadow: var(--shadow-md);
+}
+.form__btn:hover {
+  background-color: floralwhite;
+  box-shadow: var(--shadow-lg);
+}
+
 .heading-secondary {
   color: var(--color-secondary);
   font-weight: 600;
@@ -183,6 +198,53 @@ nav i {
 }
 .heading-teritiary:hover {
   color: var(--color-secondary-light);
+}
+
+.form-wrapper {
+  padding: 2rem;
+  background-color: var(--color-secondary-xtra-light);
+  border-radius: 1.2rem;
+  max-width: 50rem;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  font-family: var(--font-family-heading);
+}
+
+.home-page {
+  position: relative;
+  padding-bottom: 4.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.posts {
+  border-radius: 0.8rem;
+  background-color: var(--color-secondary-xtra-light);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+  min-width: 32rem;
+  max-width: 72rem;
+}
+
+.pagination {
+  border-radius: 1.2rem;
+  padding-top: 1rem;
+  width: 90%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #fff;
+  height: 4.2rem;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .nav {
@@ -380,43 +442,6 @@ nav i {
 .detail__btns {
   margin-top: 2rem;
   margin-left: auto;
-}
-
-.home-page {
-  position: relative;
-  padding-bottom: 4.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 1;
-}
-
-.posts {
-  border-radius: 0.8rem;
-  background-color: var(--color-secondary-xtra-light);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2.4rem;
-  min-width: 32rem;
-  max-width: 72rem;
-}
-
-.pagination {
-  border-radius: 1.2rem;
-  padding-top: 1rem;
-  width: 90%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background-color: #fff;
-  height: 4.2rem;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
 }
 
 /*# sourceMappingURL=main.css.map */

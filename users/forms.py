@@ -11,6 +11,8 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ["username", "email", "password1", "password2"]
 
+        widgets = {"username": forms.TextInput(attrs={"class": "form__field"})}
+
 
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()

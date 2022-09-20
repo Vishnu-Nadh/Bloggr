@@ -1,4 +1,5 @@
 {% extends 'blog/base.html' %}
+{% load tailwind_filters %}
 {% block content %}
 <section>
   <div>
@@ -13,7 +14,7 @@
   {% csrf_token %}
   <fieldset class="form__group">
     <legend class="form__title">Profile Info</legend>
-    {{ u_form }} {{ p_form }}
+    {{ u_form|crispy }} {{ p_form|crispy }}
   </fieldset>
   <div class="form__group">
     <button type="submit" class="form__btn">Update Info</button>
