@@ -1,0 +1,42 @@
+.detail {
+  @include flexColCenter(1rem);
+  align-items: flex-start;
+  font-size: 1.6rem;
+
+  &__info {
+    @include flexRowCenter;
+    font-family: var(--font-family-heading);
+
+    &-items {
+      font-weight: 500;
+    }
+  }
+
+  &__author {
+    font-weight: 600;
+    color: var(--color-secondary);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__title {
+    color: var(--color-secondary);
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__image {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+  }
+
+  &__btns {
+    margin-top: 2rem;
+    margin-left: auto;
+  }
+}

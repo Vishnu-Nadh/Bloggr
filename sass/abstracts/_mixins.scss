@@ -1,0 +1,67 @@
+@mixin flexRowCenter($gap: var(--list-gap)) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flexColCenter($gap: var(--list-gap)) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+// MEDIA QUERY MANAGER
+@mixin respond($device) {
+  @if $device == xs {
+    @media (max-width: 30em) {
+      // when width is < 480px
+      @content;
+    }
+  }
+
+  @if $device == ss {
+    @media (max-width: 38.75em) {
+      // when width is < 620px
+      @content;
+    }
+  }
+
+  @if $device == sm {
+    @media (max-width: 48em) {
+      // when width is < 768px
+      @content;
+    }
+  }
+
+  @if $device == smd {
+    @media (max-width: 56.25em) {
+      // when width is < 900px
+      @content;
+    }
+  }
+
+  @if $device == md {
+    @media (max-width: 66.25em) {
+      // when width is < 1060px
+      @content;
+    }
+  }
+
+  @if $device == lg {
+    @media (max-width: 75em) {
+      // when width is < 1200px
+      @content;
+    }
+  }
+
+  @if $device == xl {
+    @media (max-width: 106.25em) {
+      // when width is < 1700px
+      @content;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+:root {
+  // COLOR VARIABLES
+  --color-primary: #16213e;
+  --color-secondary: #0f3460;
+  --color-secondary-light: ##e7ebef;
+  --color-secondary-xtra-light: #eef1f4;
+  --color-teritiary: #533483;
+  --color-teritiary-light:#755d9c;
+  --color-teritiary-xtra-light: #cbc2da;
+  --color-pink: #e94560;
+  --color-pink-light: #f07d90;
+
+  --text-color-dark: var(--color-primary);
+  --text-color-light: #e8e9ec;
+
+  --font-family-heading: "Poppins", sans-serif;
+  --font-family-paragraph: "Source Serif Pro", serif;
+
+  // DIAMENSIONS
+  --nav-height: 6.4rem;
+  --footer-height: 2.4rem;
+
+  // SPACINGS
+  --list-gap: 2rem;
+  --paddingX-lg: 4.8rem;
+  --paddingX-sm: 3.2rem;
+
+  // BOX SHADOW
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}

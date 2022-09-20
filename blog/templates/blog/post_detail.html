@@ -1,19 +1,19 @@
-{% extends "blog/base.html" %} {% block content %}
-<div>
-  <img
-    style="width: 40px; width: 40px; border-radius: 50%"
-    src="{{ object.author.profile.image.url }}"
-    alt="profile"
-  />
+{% extends "blog/base.html" %}
+{% block content %}
+<div class="detail card">
+  <div class="detail__info">
+    <img class="detail__image" src="{{ object.author.profile.image.url }}" alt="profile" />
+    <p class="detail__info-items"><a class="detail__author" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a> on {{ object.date_posted|date:"F d, Y" }}</p>
+  </div>
+  <h2 class="detail__title">
+    <a href="#"> {{ object.title }} </a>
+  </h2>
+  <p class="detail__content">{{ object.content }}</p>
+  {% if object.author == user %}
+  <div class="detail__btns">
+    <a href="{% url 'post-update' object.id %}" class="btn-update">Update</a>
+    <a href="{% url 'post-delete' object.id %}" class="btn-delete" >Delete</a>
+  </div>
 </div>
-<h1>
-  <a href="#"> {{ object.title }} </a>
-</h1>
-<p><a href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a> on {{ object.date_posted|date:"F d, Y" }}</p>
-<p>{{ object.content }}</p>
-{% if object.author == user %}
-<div>
-  <a href="{% url 'post-update' object.id %}">Update</a>
-  <a href="{% url 'post-delete' object.id %}">Delete</a>
-</div>
-{% endif %} {% endblock content %}
+{% endif %}
+{% endblock content %}

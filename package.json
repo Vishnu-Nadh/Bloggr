@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=expanded sass:static"
+    "sass-dev": "sass --watch --update --style=expanded sass:static/css"
   },
   "repository": {
     "type": "git",

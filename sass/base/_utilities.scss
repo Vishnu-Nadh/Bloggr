@@ -1,0 +1,49 @@
+.card {
+  padding: 2rem 4rem;
+  background-color: var(--color-secondary-xtra-light);
+  border-radius: 1.2rem;
+}
+
+.btn-update {
+  min-width: 10rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-teritiary);
+  box-shadow: var(--shadow-md);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--font-family-heading);
+  border-radius: .8rem;
+
+  &:hover {
+    background-color: var(--color-teritiary-light);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &:active {
+    background-color: var(--color-teritiary);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.btn-delete {
+  min-width: 10rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-pink);
+  box-shadow: var(--shadow-md);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: var(--font-family-heading);
+  border-radius: .8rem;
+
+  &:hover {
+    background-color: var(--color-pink-light);
+    box-shadow: var(--shadow-lg);
+  }
+
+  &:active {
+    background-color: var(--color-pink);
+    box-shadow: var(--shadow-md);
+  }
+}

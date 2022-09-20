@@ -6,10 +6,30 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 3.5px rgba($color: var(--color-secondary), $alpha: 0.4);
+}
+
 html {
-  font-size: 62.5%;
   &:focus-within {
     scroll-behavior: smooth;
+  }
+
+  @include respond(xl) {
+    font-size: 75%; //12px
+  }
+
+  @include respond(md) {
+    font-size: 62.5%;
+  }
+
+  @include respond(sm) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(xs) {
+    font-size: 50%; // 8px
   }
 }
 
@@ -17,12 +37,33 @@ body {
   box-sizing: border-box;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
+  font-size: 1.6rem;
   line-height: 1.5;
+  font-family: var(--font-family-paragraph);
+  & h1,
+  & h2,
+  & h3,
+  & h4,
+  & h5 {
+    font-family: var(--font-family-heading);
+  }
+}
+
+main {
+  min-height: calc(100vh - var(--nav-height));
+  padding: calc(var(--nav-height) + 2rem) var(--paddingX-sm) 2rem
+    var(--paddingX-sm);
 }
 
 ul[role="list"],
-ol[role="list"] {
+ol[role="list"],
+li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img,
@@ -53,4 +94,8 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+nav i {
+  color: var(--text-color-light);
 }
